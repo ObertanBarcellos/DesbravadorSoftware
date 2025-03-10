@@ -30,6 +30,7 @@ dotnet restore
 
 Check the base is configured in the appsettings.json file!
 
+I had a problem with the migrations in which I could not rollback. So I adjusted my database manually and adjusted the models, in principle it is to be correct. If you have problems you can put all the fields in the database with the possibility of being null except the Id, ProjectId and Dates fields.
 Perform the migrations to create the database tables:
 
 dotnet ef migrations add nome-da-migtarion
