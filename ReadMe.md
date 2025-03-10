@@ -31,9 +31,11 @@ dotnet restore
 Check the base is configured in the appsettings.json file!
 
 I had a problem with the migrations in which I could not rollback. So I adjusted my database manually and adjusted the models, in principle it is to be correct. If you have problems you can put all the fields in the database with the possibility of being null except the Id, ProjectId and Dates fields.
+
 Perform the migrations to create the database tables:
 
 dotnet ef migrations add nome-da-migtarion
+
 dotnet ef database update
 
 ## Running the Project
@@ -58,21 +60,32 @@ pnpm run dev
 
 ## Project Structure
 
-/frontend: Contains the source code of the frontend in React with TypeScript.
-    src/: Main folder of the React code.
-    public/: Static files like index.html.
-/api: Contains the source code of the API in .NET.
-    Controllers/: API controllers.
-    Models/: Data models.
-    appsettings.json: Database configuration.
-    Program.cs: Application entry point.
+    /frontend: Contains the source code of the frontend in React with TypeScript.
+
+        src/: Main folder of the React code.
+
+        public/: Static files like index.html.
+
+    /api: Contains the source code of the API in .NET.
+
+        Controllers/: API controllers.
+
+        Models/: Data models.
+
+        appsettings.json: Database configuration.
+
+        Program.cs: Application entry point.
 
 
 ## Useful Commands
 
 Install frontend dependencies: pnpm install
+
 Run the frontend in development mode: pnpm run dev
+
 Run the API: dotnet run
+
 Restore .NET dependencies: dotnet restore
 
-Made with ❤️ by Obertan Barcellos
+#
+### Made with ❤️ by Obertan Barcellos
