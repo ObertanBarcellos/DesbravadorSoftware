@@ -1,76 +1,77 @@
-# Nome do Projeto
+# Desbravador Software Test
 
-Bem-vindo ao repositório do projeto [Nome do Projeto]! Este projeto consiste em uma aplicação full-stack, com um frontend desenvolvido em React usando TypeScript e um backend em .NET. Abaixo, você encontrará todas as instruções necessárias para configurar e rodar o projeto localmente.
+Welcome to the project repository! This project consists of a full-stack application, with a frontend developed in React using TypeScript and a backend in .NET. Below, you will find all the easy instructions to set up and run the project locally.
 
-## Pré-requisitos
+## Prerequisites
 
-Antes de começar, certifique-se de que você tem as seguintes ferramentas instaladas em sua máquina:
+Before you begin, make sure you have the following tools installed on your machine:
 
-- [Node.js](https://nodejs.org/) (v18 ou superior)
-- [pnpm](https://pnpm.io/) (gerenciador de pacotes)
-- [.NET SDK](https://dotnet.microsoft.com/download) (v8 ou superior)
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [pnpm](https://pnpm.io/) (package manager)
+- [.NET SDK](https://dotnet.microsoft.com/download) (v8 or higher)
 
-## Configuração do Projeto
+## Project Configuration
 
-### 1. Instalar Dependências do Frontend
+### 1. Install Frontend Dependencies
 
-Navegue até a pasta do frontend e instale as dependências necessárias:
+Navigate to the frontend folder and install the required dependencies:
 
 cd frontend
 pnpm install
 
-### 2. Instalar Dependências do Backend
+### 2. Install Backend Dependencies
 
-Navegue até a pasta da API e restaure as dependências do .NET:
+Navigate to the API folder and restore the .NET dependencies:
 
 cd ../api
 dotnet restore
 
-### 3. Configurar base de dados na API
+### 3. Configure database in API
 
-Verifique a base esta configurada no arquivo appsettings.json!
+Check the base is configured in the appsettings.json file!
 
-Faça as migrations para criar as tabelas da base:
+Perform the migrations to create the database tables:
 
 dotnet ef migrations add nome-da-migtarion
 dotnet ef database update
 
-## Executando o Projeto
+## Running the Project
 
-### 1. Iniciar o Backend
+### 1. Start the Backend
 
-Navegue até a pasta da API e verifique se esta tudo correto:
+Navigate to the API folder and check if everything is correct:
 
 cd api
 dotnet build
 
-Execute o projeto:
+Run the project:
 
 dotnet run
 
-### 2. Iniciar o Frontend
+### 2. Start the Frontend
 
-Navegue até a pasta do frontend e inicie o servidor de desenvolvimento:
+Navigate to the frontend folder and start the development server:
 
 cd ../frontend
 pnpm run dev
 
-## Estrutura do Projeto
+## Project Structure
 
-/frontend: Contém o código-fonte do frontend em React com TypeScript.
-    src/: Pasta principal do código React.
-    public/: Arquivos estáticos como index.html.
-/api: Contém o código-fonte da API em .NET.
-    Controllers/: Controladores da API.
-    Models/: Modelos de dados.
-    appsettings.json: Configuração da base de dados.
-    Program.cs: Ponto de entrada da aplicação.
+/frontend: Contains the source code of the frontend in React with TypeScript.
+    src/: Main folder of the React code.
+    public/: Static files like index.html.
+/api: Contains the source code of the API in .NET.
+    Controllers/: API controllers.
+    Models/: Data models.
+    appsettings.json: Database configuration.
+    Program.cs: Application entry point.
 
-## Comandos Úteis
 
-Instalar dependências do frontend: pnpm install
-Rodar o frontend em modo de desenvolvimento: pnpm run dev
-Rodar a API: dotnet run
-Restaurar dependências do .NET: dotnet restore
+## Useful Commands
 
-Feito com ❤️ por Obertan Barcellos
+Install frontend dependencies: pnpm install
+Run the frontend in development mode: pnpm run dev
+Run the API: dotnet run
+Restore .NET dependencies: dotnet restore
+
+Made with ❤️ by Obertan Barcellos
