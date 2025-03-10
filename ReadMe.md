@@ -16,15 +16,15 @@ Before you begin, make sure you have the following tools installed on your machi
 
 Navigate to the frontend folder and install the required dependencies:
 
-cd frontend
-pnpm install
+    cd frontend
+    pnpm install
 
 ### 2. Install Backend Dependencies
 
 Navigate to the API folder and restore the .NET dependencies:
 
-cd ../api
-dotnet restore
+    cd ../api
+    dotnet restore
 
 ### 3. Configure database in API
 
@@ -34,9 +34,8 @@ I had a problem with the migrations in which I could not rollback. So I adjusted
 
 Perform the migrations to create the database tables:
 
-dotnet ef migrations add nome-da-migtarion
-
-dotnet ef database update
+    dotnet ef migrations add nome-da-migtarion
+    dotnet ef database update
 
 ## Running the Project
 
@@ -44,19 +43,19 @@ dotnet ef database update
 
 Navigate to the API folder and check if everything is correct:
 
-cd api
-dotnet build
+    cd api
+    dotnet build
 
 Run the project:
 
-dotnet run
+    dotnet run
 
 ### 2. Start the Frontend
 
 Navigate to the frontend folder and start the development server:
 
-cd ../frontend
-pnpm run dev
+    cd ../frontend
+    pnpm run dev
 
 ## Project Structure
 
@@ -79,13 +78,21 @@ pnpm run dev
 
 ## Useful Commands
 
-Install frontend dependencies: pnpm install
+Install frontend dependencies:
 
-Run the frontend in development mode: pnpm run dev
+    pnpm install
 
-Run the API: dotnet run
+Run the frontend in development mode: 
 
-Restore .NET dependencies: dotnet restore
+    pnpm run dev
+
+Run the API: 
+
+    dotnet run
+
+Restore .NET dependencies: 
+
+    dotnet restore
 
 #
 ### Made with ❤️ by Obertan Barcellos
