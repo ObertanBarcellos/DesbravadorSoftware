@@ -3377,11 +3377,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/obetan/Documents/tests/DesbravadorSoftware/api/api.csproj",
+      "projectUniqueName": "/home/obetan/Documents/obertan/DesbravadorSoftware/api/api.csproj",
       "projectName": "api",
-      "projectPath": "/home/obetan/Documents/tests/DesbravadorSoftware/api/api.csproj",
+      "projectPath": "/home/obetan/Documents/obertan/DesbravadorSoftware/api/api.csproj",
       "packagesPath": "/home/obetan/.nuget/packages/",
-      "outputPath": "/home/obetan/Documents/tests/DesbravadorSoftware/api/obj/",
+      "outputPath": "/home/obetan/Documents/obertan/DesbravadorSoftware/api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/obetan/.nuget/NuGet/NuGet.Config"

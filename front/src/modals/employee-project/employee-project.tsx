@@ -4,12 +4,14 @@ import {
     DialogActions,
     DialogContent,
     DialogTitle,
+    IconButton,
     Paper,
     Table,
     TableBody,
     TableContainer,
     TableHead,
-    TableRow
+    TableRow,
+    Tooltip
 } from "@mui/material"
 import { useEffect, useState } from "react"
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
@@ -70,7 +72,11 @@ export default function EmployeeProject(props: EmployeeProjectProps) {
 
     return (
         <>
-            <button className={ 'users' } onClick={ () => setOpen(true) }><PeopleAltIcon /></button>
+            <Tooltip title="Funcionários">
+                <IconButton className={ 'users' } onClick={ () => setOpen(true) }>
+                    <PeopleAltIcon />
+                </IconButton>
+            </Tooltip>
             <Dialog open={ open } onClose={ () => setOpen( false ) }>
                 <DialogTitle>Funcionarios do projeto { id }</DialogTitle>
                 <DialogContent className={ 'employee-container' }>

@@ -3,11 +3,11 @@ import {
     Dialog,
     DialogActions,
     DialogContent,
-    DialogTitle,
+    DialogTitle, IconButton,
     Input,
     MenuItem,
     Select,
-    SelectChangeEvent
+    SelectChangeEvent, Tooltip
 } from "@mui/material"
 import { useEffect, useState } from "react"
 import EditIcon from '@mui/icons-material/Edit'
@@ -87,7 +87,11 @@ export function EditProject(props: EditProjectProps){
 
     return (
         <>
-            <button className={ 'edit' } onClick={ () => setOpen(true) }><EditIcon /></button>
+            <Tooltip title="Editar Projeto">
+                <IconButton className={ 'edit' } onClick={ () => setOpen(true) }>
+                    <EditIcon />
+                </IconButton>
+            </Tooltip>
             <Dialog open={ open } onClose={ () => setOpen( false ) }>
                 <DialogTitle>Deletar projeto { id }</DialogTitle>
                 <DialogContent>

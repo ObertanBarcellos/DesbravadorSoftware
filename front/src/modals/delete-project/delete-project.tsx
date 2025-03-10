@@ -1,4 +1,4 @@
-import { Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material"
+import { Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Tooltip } from "@mui/material"
 import { useState } from "react";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
 import './delete-project.scss'
@@ -26,7 +26,11 @@ export default function DeleteProject(props: DeleteProjectProps) {
 
     return (
         <>
-            <button className={ 'delete' } onClick={ () => setOpen(true) }><DeleteForeverIcon /></button>
+            <Tooltip title="Excluir Projeto">
+                <IconButton className={ 'delete' } onClick={ () => setOpen(true) }>
+                    <DeleteForeverIcon />
+                </IconButton>
+            </Tooltip>
             <Dialog open={ open } onClose={ () => setOpen( false ) }>
                 <DialogTitle>Deletar projeto { id }</DialogTitle>
                 <DialogContent>

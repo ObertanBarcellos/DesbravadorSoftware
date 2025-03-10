@@ -7,6 +7,7 @@ import { StatusTypeNames } from "../../utils/status.ts"
 import ViewProject from "../../modals/view-project/view-project.tsx"
 import { formatProjectDescription } from "../../utils/string.ts"
 import EmployeeProject from "../../modals/employee-project/employee-project.tsx"
+import FinishProject from "../../modals/finish-project/finish-project.tsx"
 
 
 interface ProjectWidgetProps {
@@ -25,7 +26,8 @@ export default function ProjectWidget(props: ProjectWidgetProps) {
                 <div className={ 'actions' }>
                     <ViewProject id={ id } />
                     { status != 'CLOSED' && <EmployeeProject id={ id } /> }
-                    { status != 'CLOSED' &&  <EditProject fetchData={ fetchData } id={ id } /> }
+                    { status != 'CLOSED' && <FinishProject fetchData={ fetchData } project={ project } /> }
+                    { status != 'CLOSED' && <EditProject fetchData={ fetchData } id={ id } /> }
                     { status != 'STARTED' && status != 'IN_PROGRESS' && status != 'CLOSED' && <DeleteProject fetchData={ fetchData } id={ id } /> }
                 </div>
             </div>

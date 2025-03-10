@@ -99,6 +99,10 @@ public class ProjectController: ControllerBase {
             return BadRequest();
         }
 
+        if (project.Status == "CLOSED") {
+            project.EndDate = DateTime.UtcNow;
+        }
+
         _context.Entry(project).State = EntityState.Modified;
 
         try {
@@ -119,12 +123,17 @@ public class ProjectController: ControllerBase {
     // DELETE: api/project/5
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteProject(int id) {
-        var project = await _context.Projects.FindAsync(id);
+        var project = await _context.Projects.Include(p => p.Employees).FirstOrDefaultAsync(p => p.Id == id);
+
         if (project == null) {
             return NotFound();
         }
 
+        _context.Employees.RemoveRange(project.Employees);
+
+        // Remove o Project
         _context.Projects.Remove(project);
+
         await _context.SaveChangesAsync();
 
         return NoContent();

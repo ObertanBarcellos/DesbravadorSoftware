@@ -1,11 +1,11 @@
 export function projectViewDate(dateHour: Date | string): string | null {
-    const data = new Date(dateHour)
+    const newDate = new Date(dateHour)
 
-    const day = String(data.getUTCDate()).padStart(2, '0')
-    const month = String(data.getUTCMonth() + 1).padStart(2, '0')
-    const year = data.getUTCFullYear()
-    const hour = String(data.getUTCHours()).padStart(2, '0')
-    const min = String(data.getUTCMinutes()).padStart(2, '0')
+    const day = String(newDate.getDate()).padStart(2, '0')
+    const month = String(newDate.getMonth() + 1).padStart(2, '0')
+    const year = newDate.getFullYear()
+    const hour = String(newDate.getHours()).padStart(2, '0')
+    const min = String(newDate.getMinutes()).padStart(2, '0')
 
     const date = `${ day }/${ month }/${ year }`
     const minHour = `${ hour }:${ min }`

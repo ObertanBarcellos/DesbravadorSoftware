@@ -1,6 +1,6 @@
 import './view-project.scss'
 import FullscreenIcon from '@mui/icons-material/Fullscreen'
-import { Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material"
+import { Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Tooltip } from "@mui/material"
 import { useEffect, useState } from "react"
 import api from "../../api/api.ts"
 import { Project } from "../../types/project.ts"
@@ -35,7 +35,11 @@ export default function ViewProject(props: ViewProjectProps) {
 
 
     return ( <>
-            <button className={ 'view' } onClick={ () => setOpen(true) }><FullscreenIcon /></button>
+            <Tooltip title="Visualizar">
+                <IconButton className={ 'view' } onClick={ () => setOpen(true) }>
+                    <FullscreenIcon />
+                </IconButton>
+            </Tooltip>
             <Dialog open={ open } onClose={ () => setOpen(false) }>
                 <DialogTitle>Projeto { id }</DialogTitle>
                 <DialogContent className={ 'view-project-content' }>
