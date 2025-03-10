@@ -1,2 +1,9 @@
 # Ignore the api/Migrations folder
-api/Migrations/
+Migrations/
+
+
+# Ignore build folders and dependencies
+bin/
+obj/
+artifacts/
+packages/
