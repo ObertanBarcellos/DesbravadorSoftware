@@ -1,0 +1,102 @@
+.project-widget-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 15px;
+  gap: 15px;
+
+  background-color: #FFFFEA;
+  color: #03191E;
+
+  h2, p {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .project-list-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+
+      &.delete {
+        color: #ff0000;
+      }
+
+      &.edit {
+        color: #005fff;
+      }
+
+      &.users {
+        color: #0ba140;
+      }
+
+      &.view {
+        color: #03191E;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .project-widget-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .project-widget-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .LOW, .MEDIUM, .HIGH {
+      font-weight: bold;
+    }
+
+    .LOW {
+      color: #25ff00;
+    }
+
+    .MEDIUM {
+      color: #005fff;
+    }
+    
+    .HIGH {
+      color: #ff0000;
+    }
+  }
+}

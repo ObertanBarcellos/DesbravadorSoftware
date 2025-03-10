@@ -1,0 +1,20 @@
+.view-project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .view-project-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.16);
+    color: #03191E;
+    border-radius: 10px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
