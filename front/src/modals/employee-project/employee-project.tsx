@@ -10,14 +10,14 @@ import {
     TableContainer,
     TableHead,
     TableRow
-} from "@mui/material";
-import { useEffect, useState } from "react";
-import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import api from "../../api/api.ts";
-import { Employee } from "../../types/employee.ts";
-import { StyledTableCell, StyledTableRow } from "../../utils/table-row.ts";
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import employeeApi from "../../api/employeeApi.ts";
+} from "@mui/material"
+import { useEffect, useState } from "react"
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
+import api from "../../api/api.ts"
+import { Employee } from "../../types/employee.ts"
+import { StyledTableCell, StyledTableRow } from "../../utils/table-row.ts"
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
+import employeeApi from "../../api/employeeApi.ts"
 
 interface EmployeeProjectProps {
     id: number

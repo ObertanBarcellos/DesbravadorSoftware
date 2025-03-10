@@ -1,12 +1,12 @@
 import './projetc-widget.scss'
-import { Project } from "../../types/project.ts";
-import { RiskTypeNames } from "../../utils/risk.ts";
-import DeleteProject from "../../modals/delete-project/delete-project.tsx";
-import { EditProject } from "../../modals/edit-project/edit-project.tsx";
-import { StatusTypeNames } from "../../utils/status.ts";
-import ViewProject from "../../modals/view-project/view-project.tsx";
-import { formatProjectDescription } from "../../utils/string.ts";
-import EmployeeProject from "../../modals/employee-project/employee-project.tsx";
+import { Project } from "../../types/project.ts"
+import { RiskTypeNames } from "../../utils/risk.ts"
+import DeleteProject from "../../modals/delete-project/delete-project.tsx"
+import { EditProject } from "../../modals/edit-project/edit-project.tsx"
+import { StatusTypeNames } from "../../utils/status.ts"
+import ViewProject from "../../modals/view-project/view-project.tsx"
+import { formatProjectDescription } from "../../utils/string.ts"
+import EmployeeProject from "../../modals/employee-project/employee-project.tsx"
 
 
 interface ProjectWidgetProps {

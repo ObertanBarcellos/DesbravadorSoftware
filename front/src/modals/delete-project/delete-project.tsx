@@ -1,9 +1,9 @@
-import { Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
+import { Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material"
 import { useState } from "react";
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
 import './delete-project.scss'
-import api from "../../api/api.ts";
-import { Project } from "../../types/project.ts";
+import api from "../../api/api.ts"
+import { Project } from "../../types/project.ts"
 
 interface DeleteProjectProps {
     id: number

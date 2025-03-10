@@ -1,4 +1,4 @@
-import {styled, TableCell, tableCellClasses, TableRow} from "@mui/material";
+import { styled, TableCell, tableCellClasses, TableRow } from "@mui/material";
 
 export const StyledTableRow = styled(TableRow)(({ theme }) => ({
     '&:nth-of-type(odd)': {
@@ -8,7 +8,7 @@ export const StyledTableRow = styled(TableRow)(({ theme }) => ({
     '&:last-child td, &:last-child th': {
         border: 0,
     },
-}));
+}))
 
 export const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -18,4 +18,4 @@ export const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.body}`]: {
         fontSize: 14,
     },
-}));
+}))

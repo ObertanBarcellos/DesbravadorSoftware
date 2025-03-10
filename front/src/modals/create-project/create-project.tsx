@@ -7,13 +7,13 @@ import {
     MenuItem,
     Select,
     SelectChangeEvent
-} from "@mui/material";
-import { useState } from "react";
+} from "@mui/material"
+import { useState } from "react"
 import './create-project.scss'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { Project } from "../../types/project.ts";
-import api from "../../api/api.ts";
-import { RiskTypeNames } from "../../utils/risk.ts";
+import { Project } from "../../types/project.ts"
+import api from "../../api/api.ts"
+import { RiskTypeNames } from "../../utils/risk.ts"
 
 interface DeleteProjectProps {
     fetchData: () => void

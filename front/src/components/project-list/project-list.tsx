@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import { Project } from '../../types/project';
-import api from '../../api/api';
+import { useEffect, useState } from 'react'
+import { Project } from '../../types/project'
+import api from '../../api/api'
 import './project-list.scss'
-import ProjectWidget from "../project-widget/project-widget.tsx";
-import CreateProject from "../../modals/create-project/create-project.tsx";
+import ProjectWidget from "../project-widget/project-widget.tsx"
+import CreateProject from "../../modals/create-project/create-project.tsx"
 
 export default function ProjectList() {
   const [ projects, setProjects ] = useState<Project[]>([])
@@ -37,7 +37,8 @@ export default function ProjectList() {
         )) }
       </div>
       <div className={ 'project-list-footer' }>
-        <p>Feito com ❤️ por <a href='https://github.com/ObertanBarcellos' target='_blank'>Obertan Barcellos</a></p>
+        <p>Projeto técnico desenvolvido para <a href={ 'https://www.desbravador.com.br/' } target={ '_blank' }>Debravador Software</a></p>
+        <p>Feito com ❤️ por <a href={ 'https://github.com/ObertanBarcellos' } target={ '_blank' }>Obertan Barcellos</a></p>
       </div>
     </div>
   )

@@ -1,13 +1,13 @@
 import './view-project.scss'
 import FullscreenIcon from '@mui/icons-material/Fullscreen'
-import {Dialog, DialogActions, DialogContent, DialogTitle} from "@mui/material";
-import {useEffect, useState} from "react";
-import api from "../../api/api.ts";
-import {Project} from "../../types/project.ts";
-import {StatusTypeNames} from "../../utils/status.ts";
-import {RiskTypeNames} from "../../utils/risk.ts";
-import {projectViewDate} from "../../utils/date.ts";
-import {EmployeeView} from "../employee-view/employee-view.tsx";
+import { Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material"
+import { useEffect, useState } from "react"
+import api from "../../api/api.ts"
+import { Project } from "../../types/project.ts"
+import { StatusTypeNames } from "../../utils/status.ts"
+import { RiskTypeNames } from "../../utils/risk.ts"
+import { projectViewDate } from "../../utils/date.ts"
+import { EmployeeView } from "../employee-view/employee-view.tsx"
 
 interface ViewProjectProps {
     id: number

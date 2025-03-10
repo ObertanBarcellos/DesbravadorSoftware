@@ -8,14 +8,14 @@ import {
     MenuItem,
     Select,
     SelectChangeEvent
-} from "@mui/material";
-import { useEffect, useState } from "react";
-import EditIcon from '@mui/icons-material/Edit';
-import api from "../../api/api.ts";
-import { Project } from "../../types/project.ts";
+} from "@mui/material"
+import { useEffect, useState } from "react"
+import EditIcon from '@mui/icons-material/Edit'
+import api from "../../api/api.ts"
+import { Project } from "../../types/project.ts"
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { StatusTypeNames } from "../../utils/status.ts";
-import { RiskTypeNames } from "../../utils/risk.ts";
+import { StatusTypeNames } from "../../utils/status.ts"
+import { RiskTypeNames } from "../../utils/risk.ts"
 
 interface EditProjectProps {
     id: number
