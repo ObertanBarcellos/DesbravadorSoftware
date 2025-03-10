@@ -1,4 +1,4 @@
-import './users-project.scss'
+import './employee-project.scss'
 import {
     Dialog,
     DialogActions,
@@ -19,11 +19,11 @@ import { StyledTableCell, StyledTableRow } from "../../utils/table-row.ts";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import employeeApi from "../../api/employeeApi.ts";
 
-interface UsersProjectProps {
+interface EmployeeProjectProps {
     id: number
 }
 
-export default function UsersProject(props: UsersProjectProps) {
+export default function EmployeeProject(props: EmployeeProjectProps) {
     const { id } = props
     const [ open, setOpen ] = useState(false)
     const [ employees, setEmployees ] = useState<Employee[]>([])
@@ -31,7 +31,6 @@ export default function UsersProject(props: UsersProjectProps) {
 
     const getEmployees = async () => {
         const response = await api.get<Employee[]>(`/employee/${ id }`)
-        console.log(response.data)
         setEmployees(response.data)
     }
 

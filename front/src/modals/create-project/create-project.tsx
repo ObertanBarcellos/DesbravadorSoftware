@@ -28,9 +28,7 @@ export default function CreateProject(props: DeleteProjectProps) {
 
     const onSubmit: SubmitHandler<Project> = async data => {
         try {
-            console.log(data)
             await api.post('/project', { ...data })
-
             fetchData()
             reset()
             setOpen(false)

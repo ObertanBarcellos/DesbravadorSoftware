@@ -7,6 +7,7 @@ import {Project} from "../../types/project.ts";
 import {StatusTypeNames} from "../../utils/status.ts";
 import {RiskTypeNames} from "../../utils/risk.ts";
 import {projectViewDate} from "../../utils/date.ts";
+import {EmployeeView} from "../employee-view/employee-view.tsx";
 
 interface ViewProjectProps {
     id: number
@@ -20,7 +21,6 @@ export default function ViewProject(props: ViewProjectProps) {
     const getProject = async () => {
         try {
             const response = await api.get<Project>(`/project/${ id }`)
-
             setProject(response.data)
         } catch (e) {
             console.log(e)
@@ -59,6 +59,7 @@ export default function ViewProject(props: ViewProjectProps) {
                     </div>
                 </DialogContent>
                 <DialogActions className={ 'modal-actions' }>
+                    <EmployeeView id={ id } />
                     <button className={ 'actions-button close' } onClick={ () => setOpen( false ) }>Fechar</button>
                 </DialogActions>
             </Dialog>

@@ -34,7 +34,6 @@ export function EditProject(props: EditProjectProps){
     const getProject = async () => {
         try {
             const response = await api.get<Project>(`/project/${ id }`)
-            console.log(response.data)
             setValue('name', response.data.name)
             setValue('description', response.data.description)
 

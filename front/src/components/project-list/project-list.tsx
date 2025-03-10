@@ -11,7 +11,6 @@ export default function ProjectList() {
   const fetchData = async () => {
     try {
       const response = await api.get<Project[]>('/project')
-      console.log(response.data)
       setProjects(response.data)
     } catch (e) {
       console.log(e)
@@ -24,17 +23,21 @@ export default function ProjectList() {
 
   return (
     <div className={ 'project-list-container' }>
-      <div className='project-list-header'>
+      <div className={ 'project-list-header' }>
           <h1>Projetos</h1>
           <CreateProject fetchData={ () => fetchData() } />
       </div>
-      <div className={ 'project-list-content' }>
-        { projects.map((project) => (
+      { projects.length == 0 && <div className={ 'project-list-not-found' }>
+          <img src={ '/1662569.png' } alt='Not Found' draggable={ false } />
+          <p>Não foi possivel localizar nenhum projeto!</p>
+      </div> }
+      <div className={ `project-list-content ${ projects.length < 3 && 'has-few' }` }>
+        { projects.length > 0 && projects.map((project) => (
             <ProjectWidget key={ project.id } fetchData={ () => fetchData() } project={ project } />
         )) }
       </div>
       <div className={ 'project-list-footer' }>
-
+        <p>Feito com ❤️ por <a href='https://github.com/ObertanBarcellos' target='_blank'>Obertan Barcellos</a></p>
       </div>
     </div>
   )

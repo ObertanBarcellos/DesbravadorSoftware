@@ -4,9 +4,9 @@ import { RiskTypeNames } from "../../utils/risk.ts";
 import DeleteProject from "../../modals/delete-project/delete-project.tsx";
 import { EditProject } from "../../modals/edit-project/edit-project.tsx";
 import { StatusTypeNames } from "../../utils/status.ts";
-import UsersProject from "../../modals/users-project/users-project.tsx";
 import ViewProject from "../../modals/view-project/view-project.tsx";
-import {formatProjectDescription} from "../../utils/string.ts";
+import { formatProjectDescription } from "../../utils/string.ts";
+import EmployeeProject from "../../modals/employee-project/employee-project.tsx";
 
 
 interface ProjectWidgetProps {
@@ -24,8 +24,8 @@ export default function ProjectWidget(props: ProjectWidgetProps) {
                 <h1>Nº { id }</h1>
                 <div className={ 'actions' }>
                     <ViewProject id={ id } />
-                    <UsersProject id={ id } />
-                    <EditProject fetchData={ fetchData } id={ id } />
+                    { status != 'CLOSED' && <EmployeeProject id={ id } /> }
+                    { status != 'CLOSED' &&  <EditProject fetchData={ fetchData } id={ id } /> }
                     { status != 'STARTED' && status != 'IN_PROGRESS' && status != 'CLOSED' && <DeleteProject fetchData={ fetchData } id={ id } /> }
                 </div>
             </div>

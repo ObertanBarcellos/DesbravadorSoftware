@@ -18,6 +18,22 @@
     justify-content: center;
     gap: 15px;
   }
+
+  .project-list-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    p {
+      font-weight: bold;
+    }
+
+    img {
+      width: 160px;
+    }
+  }
 }
 
 @media (min-width: 1024px) {
@@ -32,12 +48,18 @@
     }
 
     .project-list-content {
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      min-width: 400px;
-      flex-wrap: wrap;
-      gap: 15px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+
+      &.has-few {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .project-list-content > * {
+      box-sizing: border-box;
     }
   }
 }
